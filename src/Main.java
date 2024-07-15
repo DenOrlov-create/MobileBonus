@@ -3,25 +3,23 @@ public class Main {
 
 
         int firstData = 100;
-        int firstReplenishment = 300;
-        int secondReplenishment = 1100;
+        int Replenishment = 1100;
 
-        int firstbalance = firstData + firstReplenishment;
-        System.out.println("Итоговая сумма баланса клиента после первого пополнения:" + firstbalance);
+        int bonus;
+        if (Replenishment > 1000)
+        {
+            bonus = (Replenishment / 100) * 1;
 
-        int secondbalance = firstData + secondReplenishment;
-
-        int sum = secondReplenishment / 100;
-
-        int bonus = sum;
-        if (secondReplenishment >= 1000) {
-            bonus = sum;
+        }    else {
+            bonus = 0;
         }
-        int secondbonus = secondbalance + bonus;
+        int totalBalance = firstData + Replenishment + bonus;
+
+        System.out.println("Итоговая сумма на счету:" + totalBalance);
+        System.out.println("Из них бонусные:" + bonus);
 
 
 
-        System.out.println("Итоговая сумма баланса клиента после второго пополнения:" + secondbonus);
 
 
 
